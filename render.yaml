@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: autogroup-bot
+    env: python
+    python_version: "3.12"
+    buildCommand: "pip install --upgrade pip && pip install -r requirements.txt"
+    startCommand: "python bot.py"
+    envVars:
+      - key: BOT_TOKEN
+        value: "<YOUR_BOT_TOKEN_HERE>"  # Replace with your actual bot token
